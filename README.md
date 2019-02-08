@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/travis/pwittchen/money-transfer-api.svg?branch=master&style=flat-square)](https://travis-ci.com/aitbahaa/blackfriday)
+[![Build Status](https://img.shields.io/travis/aitbahaa/blackfriday.svg?style=flat)](https://travis-ci.com/aitbahaa/blackfriday)
 [![codecov](https://img.shields.io/codecov/c/github/aitbahaa/blackfriday.svg?style=flat)](https://codecov.io/gh/aitbahaa/blackfriday/)
 
 Black Friday Test

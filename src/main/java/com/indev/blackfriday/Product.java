@@ -30,6 +30,6 @@ class Product {
     }
 
     private boolean hasNotStock(int quantityToSell) {
-        return quantity - quantityToSell <= 0;
+        return quantity - quantityToSell < 0;
     }
 }

@@ -12,14 +12,19 @@ public class Company {
     public float sells(String productType) {
         Product product = findProductByTypeName(productType);
 
-        float salePrice = product.getPrice() * PRODUCT_FIXED_SALES_QUANTITY;
+        float salePrice = product.sells(PRODUCT_FIXED_SALES_QUANTITY);
 
-        float saleMargin = salePrice  * PRODUCT_SALE_MARGIN;
+        float saleMargin = calculateSaleMargin(salePrice);
 
         totalAssets += saleMargin;
         
         return salePrice + saleMargin;
     }
+
+    private float calculateSaleMargin(float salePrice) {
+        return salePrice * PRODUCT_SALE_MARGIN;
+    }
+
 
     private Product findProductByTypeName(String typeName) {
         ProductType productType = ProductType.fromName(typeName);

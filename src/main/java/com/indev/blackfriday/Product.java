@@ -22,4 +22,14 @@ class Product {
     public ProductType getProductType() {
         return productType;
     }
+
+    public float sells(int quantityToSell){
+        if (hasNotStock(quantityToSell)) throw new RuntimeException("no stock");
+        this.quantity -= quantityToSell;
+        return quantityToSell*price;
+    }
+
+    private boolean hasNotStock(int quantityToSell) {
+        return quantity - quantityToSell <= 0;
+    }
 }
